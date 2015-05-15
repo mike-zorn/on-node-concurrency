@@ -1,0 +1,18 @@
+{
+  "name": "@apechimp/on-node-concurrency",
+  "version": "1.0.0",
+  "description": "Code example for talk at charm city js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Mike Atkins",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "async": "^0.9.0",
+    "curry": "^1.2.0",
+    "standard": "^3.8.0",
+    "tape": "^4.0.0"
+  }
+}
