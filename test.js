@@ -1,3 +1,5 @@
+'use strict';
+
 var async = require('async')
 var curry = require('curry')
 var test = require('tape')
@@ -43,6 +45,21 @@ test('2 x 2500000000: single request', function (t) {
 
 test('2 x 2500000000: 3 requests', function (t) {
   async.parallel([
+    sendRequest(2, 2500000000, t),
+    sendRequest(2, 2500000000, t),
+    sendRequest(2, 2500000000, t)
+  ], t.end)
+})
+
+test('2 x 2500000000: 10 requests', function (t) {
+  async.parallel([
+    sendRequest(2, 2500000000, t),
+    sendRequest(2, 2500000000, t),
+    sendRequest(2, 2500000000, t),
+    sendRequest(2, 2500000000, t),
+    sendRequest(2, 2500000000, t),
+    sendRequest(2, 2500000000, t),
+    sendRequest(2, 2500000000, t),
     sendRequest(2, 2500000000, t),
     sendRequest(2, 2500000000, t),
     sendRequest(2, 2500000000, t)

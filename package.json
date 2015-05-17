@@ -8,7 +8,10 @@
   },
   "author": "Mike Atkins",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "nan": "^1.8.4"
+  },
   "devDependencies": {
     "async": "^0.9.0",
     "curry": "^1.2.0",
