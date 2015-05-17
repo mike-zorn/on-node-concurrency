@@ -8,6 +8,8 @@ var server = require('./index')
 
 var port
 
+var Y = 25000000
+
 var sendRequest = curry(function (x, y, t, cb) {
   var time = process.hrtime()
   var req = http.request({
@@ -39,30 +41,30 @@ test('2 x 100: single request', function (t) {
   sendRequest(2, 100, t, t.end)
 })
 
-test('2 x 2500000000: single request', function (t) {
-  sendRequest(2, 2500000000, t, t.end)
+test('2 x ' + Y + ': single request', function (t) {
+  sendRequest(2, Y, t, t.end)
 })
 
-test('2 x 2500000000: 3 requests', function (t) {
+test('2 x ' + Y + ': 3 requests', function (t) {
   async.parallel([
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t)
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t)
   ], t.end)
 })
 
-test('2 x 2500000000: 10 requests', function (t) {
+test('2 x ' + Y + ': 10 requests', function (t) {
   async.parallel([
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t),
-    sendRequest(2, 2500000000, t)
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t),
+    sendRequest(2, Y, t)
   ], t.end)
 })
 
