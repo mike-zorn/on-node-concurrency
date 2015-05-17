@@ -14,7 +14,9 @@ void MultiplyWorker::Execute () {
   for (long long i = 0; i < this->y; i++) {
     this->result += this->x;
   }
-  sleep(2);
+  if (getenv("SLEEP_FOR_2") != NULL) {
+    sleep(2);
+  }
 }
 
 void MultiplyWorker::HandleOKCallback () {
