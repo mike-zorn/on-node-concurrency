@@ -1,7 +1,7 @@
 on-node-concurrency
 ===================
 
-source code for talk at charmcity js
+[source code for talk at charmcity js](https://docs.google.com/presentation/d/1kUcS0TX5uJj5qrZNew976AJ8KESkiWQKDuQ7OClSUmQ/edit?usp=sharing)
 
 Installation
 ------------
